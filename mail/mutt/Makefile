@@ -1,7 +1,7 @@
 # Created by: Udo Schweigert
 
 PORTNAME=	mutt
-DISTVERSION=	2.1.0
+DISTVERSION=	2.1.3
 CATEGORIES+=	mail
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 		https://bitbucket.org/mutt/mutt/downloads/ \
@@ -42,8 +42,8 @@ CONFIGURE_ARGS=	--disable-fcntl \
 CONFIGURE_ARGS+=	${MUTT_CONFIGURE_ARGS}
 .endif
 
-CONFLICTS=	ja-mutt-[0-9]* ja-mutt-devel-[0-9]* mutt-1.4* \
-		mutt-devel-lite-[0-9]* mutt-lite-[0-9]* zh-mutt-devel-[0-9]*
+CONFLICTS=	ja-mutt ja-mutt-devel mutt-1.4* \
+		mutt-devel-lite mutt-lite zh-mutt-devel
 
 INFO=		${PORTNAME}
 
@@ -191,7 +191,7 @@ QUOTE_PATCH_PATCHFILES=	patch-${VVV_PATCH_VERSION}.vvv.initials.xz:vvv \
 .include <bsd.port.options.mk>
 
 VVV_PATCH_VERSION=	1.13.0
-GREETING_PATCH_VERSION=	2.0.6
+GREETING_PATCH_VERSION=	2.1.0
 
 post-install:
 	${INSTALL_MAN} ${FILESDIR}/mailcap.5 ${STAGEDIR}${MANPREFIX}/man/man5

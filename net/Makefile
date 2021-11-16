@@ -34,7 +34,6 @@
     SUBDIR += aslookup
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
-    SUBDIR += asterisk13
     SUBDIR += asterisk16
     SUBDIR += asterisk18
     SUBDIR += astron
@@ -126,11 +125,13 @@
     SUBDIR += dictd
     SUBDIR += dimes
     SUBDIR += dpdk
+    SUBDIR += dpdk-20.11
     SUBDIR += dpinger
     SUBDIR += drawterm
     SUBDIR += drive
     SUBDIR += dropbox-api-command
     SUBDIR += dropbox-uploader
+    SUBDIR += dshell
     SUBDIR += dtcp
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
@@ -155,10 +156,12 @@
     SUBDIR += findomain
     SUBDIR += flower
     SUBDIR += foreman-proxy
+    SUBDIR += fort
     SUBDIR += fpc-ldap
     SUBDIR += fpc-libenet
     SUBDIR += fpc-pcap
     SUBDIR += fping
+    SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
     SUBDIR += freeradius-client
@@ -225,6 +228,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gutenfetch
     SUBDIR += gwhois
@@ -274,11 +278,11 @@
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
+    SUBDIR += ipinfo-cli
     SUBDIR += ipsumdump
     SUBDIR += ipsvd
     SUBDIR += ipxe
     SUBDIR += irrd
-    SUBDIR += irrd-legacy
     SUBDIR += isboot-kmod
     SUBDIR += isc-dhcp44-client
     SUBDIR += isc-dhcp44-relay
@@ -290,16 +294,17 @@
     SUBDIR += jicmp
     SUBDIR += jicmp6
     SUBDIR += jose
+    SUBDIR += jotta-cli
     SUBDIR += jrdesktop
     SUBDIR += jsch
     SUBDIR += jumpgate
     SUBDIR += jwhois
     SUBDIR += k6
     SUBDIR += kafka
-    SUBDIR += kafkacat
     SUBDIR += kalarmcal
     SUBDIR += kamailio
     SUBDIR += kcalutils
+    SUBDIR += kcat
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
@@ -328,6 +333,7 @@
     SUBDIR += kpimtextedit
     SUBDIR += krdc
     SUBDIR += krfb
+    SUBDIR += krill
     SUBDIR += ksmtp
     SUBDIR += ktnef
     SUBDIR += kube-controller-manager
@@ -541,8 +547,9 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openldap24-client
-    SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
+    SUBDIR += openldap25-client
+    SUBDIR += openldap25-server
     SUBDIR += openmdns
     SUBDIR += openmpi
     SUBDIR += openmpi3
@@ -551,6 +558,7 @@
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
+    SUBDIR += opensips31
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -1017,6 +1025,7 @@
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
+    SUBDIR += py-duet
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-errbot
@@ -1069,6 +1078,7 @@
     SUBDIR += py-pynamecheap
     SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
+    SUBDIR += py-pypacker
     SUBDIR += py-pypcap
     SUBDIR += py-pyroute2
     SUBDIR += py-pyroute2.core
@@ -1125,6 +1135,7 @@
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle
     SUBDIR += py-stomp.py
+    SUBDIR += py-suds-community
     SUBDIR += py-suds-jurko
     SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
@@ -1178,6 +1189,7 @@
     SUBDIR += recvnet
     SUBDIR += redir
     SUBDIR += relayd
+    SUBDIR += remarkable-devd
     SUBDIR += remmina
     SUBDIR += remotebox
     SUBDIR += remotedesk
@@ -1185,12 +1197,14 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += rospo
     SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
+    SUBDIR += rssguard
     SUBDIR += rsync
     SUBDIR += rsync-bpc
     SUBDIR += rtg
@@ -1259,7 +1273,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
-    SUBDIR += rubygem-gitlab-fog-google
     SUBDIR += rubygem-gitlab-omniauth-openid-connect
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
@@ -1285,6 +1298,7 @@
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
+    SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
     SUBDIR += rubygem-kas-grpc
@@ -1372,6 +1386,7 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += ryu
+    SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += samba412
     SUBDIR += samba413
@@ -1484,6 +1499,7 @@
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
+    SUBDIR += tinyfugue-devel
     SUBDIR += tinyldap
     SUBDIR += tn5250
     SUBDIR += toonel
@@ -1542,6 +1558,7 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifibox
     SUBDIR += wireguard
     SUBDIR += wireguard-go
     SUBDIR += wireguard-kmod

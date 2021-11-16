@@ -1,8 +1,10 @@
 PORTNAME=	vulkan-validation-layers
-DISTVERSIONPREFIX=	sdk-
-DISTVERSION=	1.2.182.0
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.2.198
 CATEGORIES=	graphics
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	ccbef81e020e.patch:-p1 # https://github.com/KhronosGroup/Vulkan-ValidationLayers/pull/3538/commits
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Validation layers for the Vulkan graphics API
@@ -13,13 +15,13 @@ BUILD_DEPENDS=	glslang>0:graphics/glslang \
 		spirv-tools>0:graphics/spirv-tools \
 		vulkan-headers>0:graphics/vulkan-headers
 
-USES=		cmake compiler:c++11-lib pkgconfig python:3.4+,build
+USES=		alias cmake compiler:c++11-lib pkgconfig python:3.4+,build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	Vulkan-ValidationLayers
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-71-g07f259e:headers/external/spirv-headers \
-		martinus:robin-hood-hashing:3.10.0:robin_hood/external/robin-hood-hashing
+GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-98-g449bc98:headers/external/spirv-headers \
+		martinus:robin-hood-hashing:3.11.3:robin_hood/external/robin-hood-hashing
 CMAKE_OFF=	BUILD_TESTS
 CMAKE_ON=	BUILD_LAYER_SUPPORT_FILES
 CMAKE_ARGS=	-DGLSLANG_INSTALL_DIR:PATH="${LOCALBASE}" \

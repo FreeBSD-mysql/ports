@@ -1,5 +1,6 @@
 PORTNAME=	libxcvt
-PORTVERSION=	s20210626
+DISTVERSIONPREFIX=	${PORTNAME}-
+DISTVERSION=	0.1.1
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -12,6 +13,6 @@ USES=		meson
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	xorg/lib
-GL_COMMIT=	035653311d35e5e478abfeb98226bad0d0a7d9f0
+GL_COMMIT=	6fe840b9295cfdc41bd734586c5b8756f6af6f9b
 
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME?=	victoria-metrics
-PORTVERSION=	1.62.0		# don't forget to update BUILDINFO_TAG
+PORTVERSION=	1.68.0		# don't forget to update BUILDINFO_TAG
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt
 
@@ -11,12 +11,10 @@ COMMENT?=	Fast, cost-effective, and scalable time series database
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
-
 USES=		gmake go:modules,no_targets
 USE_RC_SUBR?=	${PORTNAME}
 MAKE_ENV=	PKG_TAG=${DISTVERSIONPREFIX}${DISTVERSION} \
-		GOOS=${OPSYS:tl} BUILDINFO_TAG=008033a \
+		GOOS=${OPSYS:tl} BUILDINFO_TAG=f64f626 \
 		DATEINFO_TAG=${_GET_DATE:sh}
 ALL_TARGET=	${PORTNAME}-pure
 
@@ -48,7 +46,7 @@ do-install:
 do-install-DOCS-on:
 	@cd ${INSTALL_WRKSRC}/docs && ${RM} robots.txt vm*
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${INSTALL_WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
+	${MV} ${INSTALL_WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>

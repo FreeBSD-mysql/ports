@@ -1,7 +1,11 @@
 PORTNAME=	wayfire
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.2
+PORTREVISION=	1
 CATEGORIES=	x11-wm
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	7b664f055249.patch:-p1 # https://github.com/WayfireWM/wayfire/pull/1230
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	3D Wayland compositor
@@ -32,12 +36,8 @@ GH_ACCOUNT=	WayfireWM
 GH_TUPLE=	WayfireWM:wf-touch:8974eb0:wftouch/subprojects/wf-touch \
 		WayfireWM:wf-utils:889fdaf:wfutils/subprojects/wf-utils
 
-OPTIONS_DEFINE=	SUID X11
-OPTIONS_DEFAULT=SUID X11
-
-SUID_DESC=		setuid bit on "${PORTNAME}" binary (to claim DRM without seatd/console-kit-daemon)
-SUID_PLIST_SUB=		MAYBE_SUID="@(,,4755) "
-SUID_PLIST_SUB_OFF=	MAYBE_SUID=""
+OPTIONS_DEFINE=	X11
+OPTIONS_DEFAULT=X11
 
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
@@ -51,8 +51,5 @@ post-patch:
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.ini ${STAGEDIR}${EXAMPLESDIR}
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/wayland-sessions
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop \
-		${STAGEDIR}${PREFIX}/share/wayland-sessions
 
 .include <bsd.port.mk>

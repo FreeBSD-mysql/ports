@@ -2,7 +2,6 @@
 
 PORTNAME=	mesa-gallium-xa
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	Mesa Gallium XA state tracker
@@ -14,7 +13,7 @@ USE_XORG=	xorgproto
 .include "${.CURDIR:H:H}/graphics/mesa-dri/Makefile.common"
 
 ONLY_FOR_ARCHS=		i386 amd64
-ONLY_FOR_ARCHS_REASON=	Used only by VMWare supported architectures
+ONLY_FOR_ARCHS_REASON=	used only by VMware supported architectures
 
 MESON_ARGS+=	-Ddri-drivers="" \
 		-Dgallium-drivers="svga" \
@@ -33,7 +32,7 @@ MESON_ARGS+=	-Ddri-drivers="" \
 		-Dglx=disabled \
 		-Dopengl=false \
 		-Dshared-glapi=disabled \
-		-Dosmesa=none
+		-Dosmesa=false
 
 LDFLAGS_i386=		-Wl,-znotext
 

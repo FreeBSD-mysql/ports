@@ -2,7 +2,7 @@
 
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.9
+DISTVERSION=	1.8.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org
@@ -40,13 +40,10 @@ USE_RC_SUBR=	${PORTNAME}
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-lib_luajit__src__lj_prng.c
-.endif
-
 .if ${ARCH:Mpowerpc64*}
 CMAKE_ARGS+=	-DFLB_LUAJIT:BOOL=OFF
 .elif ${ARCH} == powerpc
+LDFLAGS+=	-latomic
 USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c11

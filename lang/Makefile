@@ -46,6 +46,7 @@
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
+    SUBDIR += eisl
     SUBDIR += elixir
     SUBDIR += elixir-devel
     SUBDIR += elixir-mode.el
@@ -56,8 +57,6 @@
     SUBDIR += erlang-doc
     SUBDIR += erlang-java
     SUBDIR += erlang-man
-    SUBDIR += erlang-riak
-    SUBDIR += erlang-runtime20
     SUBDIR += erlang-runtime21
     SUBDIR += erlang-runtime22
     SUBDIR += erlang-runtime23
@@ -98,7 +97,6 @@
     SUBDIR += gcc12-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
-    SUBDIR += gcc7
     SUBDIR += gcc8
     SUBDIR += gcc9
     SUBDIR += gcc9-devel
@@ -142,6 +140,7 @@
     SUBDIR += itcl4
     SUBDIR += janet
     SUBDIR += jimtcl
+    SUBDIR += jpm
     SUBDIR += jruby
     SUBDIR += jython
     SUBDIR += kawa
@@ -171,6 +170,7 @@
     SUBDIR += lua53
     SUBDIR += lua54
     SUBDIR += luajit
+    SUBDIR += luajit-devel
     SUBDIR += luajit-openresty
     SUBDIR += malbolge
     SUBDIR += maude
@@ -284,6 +284,7 @@
     SUBDIR += python2
     SUBDIR += python27
     SUBDIR += python3
+    SUBDIR += python310
     SUBDIR += python36
     SUBDIR += python37
     SUBDIR += python38
@@ -357,6 +358,7 @@
     SUBDIR += urweb
     SUBDIR += v
     SUBDIR += v8
+    SUBDIR += v8-beta
     SUBDIR += vala
     SUBDIR += visualworks
     SUBDIR += voc
@@ -365,5 +367,6 @@
     SUBDIR += yorick
     SUBDIR += ypsilon
     SUBDIR += zig
+    SUBDIR += zig-devel
 
 .include <bsd.port.subdir.mk>

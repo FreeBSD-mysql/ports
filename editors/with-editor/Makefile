@@ -2,11 +2,12 @@
 
 PORTNAME=	with-editor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.4
+DISTVERSION=	3.0.5
+PORTREVISION=	1
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	yasu@utahime.org
+MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Use the Emacsclient as the $$EDITOR of child processes
 
 LICENSE=	GPLv3+

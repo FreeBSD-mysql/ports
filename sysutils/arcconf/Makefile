@@ -19,18 +19,18 @@ ONLY_FOR_ARCHS=	amd64
 LIB_DEPENDS=	libstdc++.so.6:lang/gcc${GCC_DEFAULT}
 
 USES=		zip
-USE_GCC=	4.8+
+USE_GCC=	yes
 
 SUB_FILES+=	${PERIODICSCRIPT}
 
 PERIODICSCRIPT=	410.status-aac-raid
 
-.include <bsd.port.pre.mk>
-.if ${OSREL:R} >= 12
 DIST_TYPE=	12_x64
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} > 1300078
 RUN_DEPENDS+=	${LOCALBASE}/lib/compat/libncurses.so.8:misc/compat12x
-.else
-DIST_TYPE=	11_x64
 .endif
 
 NO_BUILD=	yes

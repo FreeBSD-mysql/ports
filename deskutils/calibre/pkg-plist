@@ -65,6 +65,7 @@ lib/calibre/calibre/db/errors.py
 lib/calibre/calibre/db/fields.py
 lib/calibre/calibre/db/lazy.py
 lib/calibre/calibre/db/legacy.py
+lib/calibre/calibre/db/listeners.py
 lib/calibre/calibre/db/locking.py
 lib/calibre/calibre/db/restore.py
 lib/calibre/calibre/db/schema_upgrades.py
@@ -173,6 +174,7 @@ lib/calibre/calibre/devices/usbms/cli.py
 lib/calibre/calibre/devices/usbms/device.py
 lib/calibre/calibre/devices/usbms/deviceconfig.py
 lib/calibre/calibre/devices/usbms/driver.py
+lib/calibre/calibre/devices/usbms/hal.py
 lib/calibre/calibre/devices/user_defined/__init__.py
 lib/calibre/calibre/devices/user_defined/driver.py
 lib/calibre/calibre/devices/utils.py
@@ -286,6 +288,7 @@ lib/calibre/calibre/ebooks/html/input.py
 lib/calibre/calibre/ebooks/html/meta.py
 lib/calibre/calibre/ebooks/html/to_zip.py
 lib/calibre/calibre/ebooks/html_entities.py
+lib/calibre/calibre/ebooks/html_transform_rules.py
 lib/calibre/calibre/ebooks/htmlz/__init__.py
 lib/calibre/calibre/ebooks/htmlz/oeb2html.py
 lib/calibre/calibre/ebooks/hyphenate.py
@@ -747,7 +750,6 @@ lib/calibre/calibre/gui2/convert/txt_input_ui.py
 lib/calibre/calibre/gui2/convert/txt_output.py
 lib/calibre/calibre/gui2/convert/txt_output_ui.py
 lib/calibre/calibre/gui2/convert/txtz_output.py
-lib/calibre/calibre/gui2/convert/xexp_edit_ui.py
 lib/calibre/calibre/gui2/convert/xpath_wizard.py
 lib/calibre/calibre/gui2/convert/xpath_wizard_ui.py
 lib/calibre/calibre/gui2/cover_flow.py
@@ -801,6 +803,7 @@ lib/calibre/calibre/gui2/dialogs/match_books_ui.py
 lib/calibre/calibre/gui2/dialogs/message_box.py
 lib/calibre/calibre/gui2/dialogs/metadata_bulk.py
 lib/calibre/calibre/gui2/dialogs/metadata_bulk_ui.py
+lib/calibre/calibre/gui2/dialogs/multisort.py
 lib/calibre/calibre/gui2/dialogs/opml.py
 lib/calibre/calibre/gui2/dialogs/password.py
 lib/calibre/calibre/gui2/dialogs/password_ui.py
@@ -834,6 +837,7 @@ lib/calibre/calibre/gui2/email.py
 lib/calibre/calibre/gui2/filename_pattern_ui.py
 lib/calibre/calibre/gui2/font_family_chooser.py
 lib/calibre/calibre/gui2/gestures.py
+lib/calibre/calibre/gui2/html_transform_rules.py
 lib/calibre/calibre/gui2/icon_theme.py
 lib/calibre/calibre/gui2/image_popup.py
 lib/calibre/calibre/gui2/init.py
@@ -1097,6 +1101,7 @@ lib/calibre/calibre/gui2/viewer/__init__.py
 lib/calibre/calibre/gui2/viewer/annotations.py
 lib/calibre/calibre/gui2/viewer/bookmarks.py
 lib/calibre/calibre/gui2/viewer/config.py
+lib/calibre/calibre/gui2/viewer/control_sleep.py
 lib/calibre/calibre/gui2/viewer/convert_book.py
 lib/calibre/calibre/gui2/viewer/highlights.py
 lib/calibre/calibre/gui2/viewer/integration.py
@@ -1928,3 +1933,4 @@ share/icons/hicolor/64x64/mimetypes/gnome-mime-application-x-topaz-ebook.png
 share/icons/hicolor/64x64/mimetypes/gnome-mime-text-lrs.png
 share/icons/hicolor/64x64/mimetypes/text-lrs.png
 share/mime/packages/calibre-mimetypes.xml
+share/zsh/site-functions/_calibre

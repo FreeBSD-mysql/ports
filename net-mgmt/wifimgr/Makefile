@@ -1,7 +1,7 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
 
 PORTNAME=	wifimgr
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	net-mgmt sysutils
 MASTER_SITES=	http://opal.com/freebsd/ports/net-mgmt/wifimgr/ \
 		LOCAL/ehaupt
@@ -17,7 +17,6 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		desktop-file-utils gnome pkgconfig tar:bzip2 xorg
 USE_GNOME=	cairo
-INSTALLS_ICONS=	yes
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	GTK2 NLS

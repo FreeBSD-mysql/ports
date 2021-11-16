@@ -1,8 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
+PORTREVISION=	1
 
 PKGNAMESUFFIX=	-im7
 
-MAINTAINER=	mm@FreeBSD.org
+MAINTAINER=	000.fbsd@quip.cz
 COMMENT=	PHP wrapper to the ImageMagick/GraphicsMagick library version 7
 
 LICENSE=	PHP301

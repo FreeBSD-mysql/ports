@@ -46,18 +46,16 @@ MASTER_SITE_AFTERSTEP+= \
 
 .if !defined(IGNORE_MASTER_SITE_APACHE)
 MASTER_SITE_APACHE+= \
-	https://www.apache.org/dist/%SUBDIR%/ \
-	https://archive.apache.org/dist/%SUBDIR%/ \
-	http://ftp.twaren.net/Unix/Web/apache/%SUBDIR%/ \
-	http://apache.mirror.uber.com.au/%SUBDIR%/ \
-	http://apache.spd.co.il/%SUBDIR%/ \
-	https://ftp.mirrorservice.org/sites/ftp.apache.org/%SUBDIR%/ \
-	https://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/%SUBDIR%/ \
-	ftp://mir1.ovh.net/ftp.apache.org/dist/%SUBDIR%/ \
-	ftp://ftp.forthnet.gr/pub/www/apache/%SUBDIR%/ \
-	ftp://xenia.sote.hu/pub/mirrors/www.apache.org/%SUBDIR%/ \
-	ftp://ftp.heanet.ie/mirrors/www.apache.org/dist/%SUBDIR%/ \
-	https://mirrors.ircam.fr/pub/apache/%SUBDIR%/
+	https://dlcdn.apache.org/%SUBDIR%/ \
+	https://mirror.netcologne.de/apache.org/%SUBDIR%/ \
+	https://ftp.wayne.edu/apache/%SUBDIR%/ \
+	https://mirror.its.dal.ca/apache/%SUBDIR%/ \
+	http://mirror.cogentco.com/pub/apache/%SUBDIR%/ \
+	http://mirror.navercorp.com/apache/%SUBDIR%/ \
+	http://ftp.kddi-research.jp/infosystems/apache/%SUBDIR%/ \
+	http://miroir.univ-lorraine.fr/apache/%SUBDIR%/ \
+	ftp://ftp.acc.umu.se/mirror/apache.org/%SUBDIR%/ \
+	ftp://ftp.nluug.nl/internet/apache/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_APACHE_COMMONS_BINARIES)
@@ -268,7 +266,7 @@ MASTER_SITE_FESTIVAL_OGI+= \
 #
 # For the full list, see the Handbook:
 #
-#    http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html
+#    https://docs.FreeBSD.org/en/books/handbook/mirrors/#mirrors-ftp
 #
 .if !defined(IGNORE_MASTER_SITE_FREEBSD_ORG)
 MASTER_SITE_FREEBSD_ORG+= \
@@ -786,7 +784,6 @@ MASTER_SITE_KDE+= \
 	http://www-ftp.lip6.fr/pub/X11/kde/%SUBDIR%/ \
 	https://ftp-stud.hs-esslingen.de/Mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	ftp://ftp.cronyx.ru/pub/mirror/kde/%SUBDIR%/ \
-	http://ftp.twaren.net/Unix/X/KDE/%SUBDIR%/ \
 	ftp://ftp.fu-berlin.de/pub/unix/X11/gui/kde/%SUBDIR%/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/kde/%SUBDIR%/ \
 	ftp://ftp.ntua.gr/pub/X11/kde/%SUBDIR%/ \
@@ -806,7 +803,7 @@ MASTER_SITE_KDE+= \
 	http://ftp.fi.muni.cz/pub/kde/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
-	http://kde.cs.nctu.edu.tw/%SUBDIR%/
+	https://kde.cs.nctu.edu.tw/ftp/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_LIBREOFFICE_DEV)

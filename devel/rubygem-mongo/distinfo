@@ -1,3 +1,3 @@
-TIMESTAMP = 1624630322
-SHA256 (rubygem/mongo-2.14.0.gem) = c76dee5962457d4b220b32d3db63bbafffbbd911fbc9e5934ee69b70d41c0ef0
-SIZE (rubygem/mongo-2.14.0.gem) = 906752
+TIMESTAMP = 1635181751
+SHA256 (rubygem/mongo-2.16.0.gem) = 9ad91f335535b909642c0365167c0979dd006c13305e59591c17e35870098877
+SIZE (rubygem/mongo-2.16.0.gem) = 990208

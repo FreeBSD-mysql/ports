@@ -1,8 +1,7 @@
 # Created by Matthias Fechner <mfechner@FreeBSD.org>
 
 PORTNAME=	marginalia
-PORTVERSION=	1.10.0
-PORTREVISION=	1
+PORTVERSION=	1.10.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -15,7 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	rubygem-actionpack61>=2.3:www/rubygem-actionpack61 \
 		rubygem-activerecord61>=2.3:databases/rubygem-activerecord61
 
-USES=		gem
+USES=		cpe gem
+CPE_VENDOR=	${PORTNAME}_project
 USE_RUBY=	yes
 
 NO_ARCH=	yes

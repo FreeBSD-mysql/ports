@@ -222,6 +222,7 @@
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
+    SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lingoteach
     SUBDIR += locale-en_DK
@@ -459,6 +460,7 @@
     SUBDIR += seabios
     SUBDIR += sent
     SUBDIR += seq2
+    SUBDIR += sfm
     SUBDIR += shared-mime-info
     SUBDIR += shc
     SUBDIR += shuffle

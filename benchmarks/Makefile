@@ -40,6 +40,8 @@
     SUBDIR += libcelero
     SUBDIR += libmicro
     SUBDIR += linux-gputest
+    SUBDIR += linux-unigine-sanctuary
+    SUBDIR += linux-unigine-tropics
     SUBDIR += linux-vdbench
     SUBDIR += lmbench
     SUBDIR += lzbench
@@ -83,6 +85,7 @@
     SUBDIR += rubygem-railsbench
     SUBDIR += scimark2
     SUBDIR += scimark2c
+    SUBDIR += shellbench
     SUBDIR += siege
     SUBDIR += sipp
     SUBDIR += slowloris
@@ -102,6 +105,7 @@
     SUBDIR += uperf
     SUBDIR += vegeta
     SUBDIR += vkmark
+    SUBDIR += vkpeak
     SUBDIR += webbench
     SUBDIR += wrk
 

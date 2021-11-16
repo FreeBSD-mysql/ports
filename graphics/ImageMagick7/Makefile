@@ -1,5 +1,5 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	7.0.11-12
+DISTVERSION=	7.1.0-13
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://www.imagemagick.org/download/ \
 		https://www.imagemagick.org/download/releases/ \
@@ -25,7 +25,7 @@ MASTER_SITES=	https://www.imagemagick.org/download/ \
 		ftp://ftp.fifi.org/pub/ImageMagick/
 PKGNAMESUFFIX=	7
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Image processing tools
 
 LICENSE=	APACHE20
@@ -229,13 +229,11 @@ _IMAGEMAGICK_THREADS=no
 . if ${_IMAGEMAGICK_THREADS} == "no"
 IGNORE=OpenMP requires threads${_IMAGEMAGICK_THREADS_IGNORE_MSG}
 . else
-CONFIGURE_ARGS+=	--enable-openmp
-USES+=		compiler:openmp
+CONFIGURE_ARGS+=       --enable-openmp
 . endif
 .else
-CONFIGURE_ARGS+=	--disable-openmp
+CONFIGURE_ARGS+=       --disable-openmp
 .endif
-
 .if defined(WITH_WINDOWS_FONT_DIR)
 CONFIGURE_ARGS+=	--with-windows-font-dir=${WITH_WINDOWS_FONT_DIR}
 .endif

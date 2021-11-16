@@ -1,9 +1,6 @@
     COMMENT = Emulators for other operating systems
 
     SUBDIR += adamem
-    SUBDIR += advancemame
-    SUBDIR += advancemenu
-    SUBDIR += advancemess
     SUBDIR += almostti
     SUBDIR += anese
     SUBDIR += aqemu
@@ -48,7 +45,6 @@
     SUBDIR += hugo
     SUBDIR += hv_kvp_cmd
     SUBDIR += i386-wine
-    SUBDIR += i386-wine-devel
     SUBDIR += ines
     SUBDIR += javatari
     SUBDIR += joytran
@@ -112,7 +108,6 @@
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
     SUBDIR += qemu-utils
-    SUBDIR += qemu31
     SUBDIR += qemu41
     SUBDIR += qemu42
     SUBDIR += qemu50
@@ -162,7 +157,6 @@
     SUBDIR += vmips
     SUBDIR += vmsbackup
     SUBDIR += vmw
-    SUBDIR += vpcs
     SUBDIR += vxtools
     SUBDIR += wine
     SUBDIR += wine-devel

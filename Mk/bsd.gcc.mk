@@ -21,18 +21,15 @@
 # If no arguments are specified, GCC is added as both a build dependency
 # and a run time dependency.
 #
-# (USE_GCC=any is deprecated, must not be used for new ports, and should
-# be migrated to USE_GCC=yes or completely removed if possible.)
-#
 #
 # Examples:
 #   USE_GCC=	yes			# port requires a current version of GCC
 #							# as defined in bsd.default-versions.mk.
-#   USE_GCC=	9+			# port requires GCC 9 or later.
-#   USE_GCC=	8			# port requires GCC 8.
+#   USE_GCC=	11+			# port requires GCC 11 or later.
+#   USE_GCC=	9			# port requires GCC 9.
 #   USE_GCC=	yes:build	# port requires a current version of GCC at
 #							# build time only.
-#   USE_GCC=	9:build		# port requires GCC 9 at build time only.
+#   USE_GCC=	10:build	# port requires GCC 10 at build time only.
 #   USE_GCC=	11+:build	# port requires GCC 11 or later at build
 #							# time only.
 #
@@ -68,8 +65,8 @@ IGNORE=	bad target specification in USE_GCC; only "build" is supported
 
 .if defined(USE_GCC) && !defined(FORCE_BASE_CC_FOR_TESTING)
 
-# Handle USE_GCC=yes and USE_GCC=any.
-.if ${USE_GCC} == yes || ${USE_GCC} == any
+# Handle USE_GCC=yes.
+.if ${USE_GCC} == yes
 USE_GCC=	${GCC_DEFAULT}+
 .endif
 

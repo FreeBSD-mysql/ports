@@ -10,7 +10,7 @@ PORTNAME=	wine
 DISTVERSION?=	0
 # define PORTREVISION with ?= to allow it to be overriden by
 # wine's PORTREVISION when cross building
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMEPREFIX=	i386-
 CATEGORIES=	emulators
 
@@ -19,14 +19,17 @@ COMMENT=	32-bit Microsoft Windows compatibility environment for 64-bit FreeBSD
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-CONFLICTS_INSTALL=	wine-[0-9]* wine-devel-[0-9]* i386-wine-devel-[0-9]*
+CONFLICTS_INSTALL=	wine-[0-9]* wine-devel-[0-9]*
+
+USES=		cpe
+CPE_VENDOR=	winehq
 
 PKGINSTALL=	${.CURDIR}/files/pkg-install
 PKGDEINSTALL=	${PKGINSTALL}
 
 distinfo-update:
 	${RM} ${.CURDIR}/distinfo ${.CURDIR}/distinfo~
-.for osrel in 11 12 13 14
+.for osrel in 12 13 14
 	${MAKE} fetch OSREL=${osrel} OSVERSION=${osrel}99999 _OSRELEASE=${osrel}
 	${MAKE} makesum OSREL=${osrel} OSVERSION=${osrel}99999 _OSRELEASE=${osrel}
 	${CAT} ${.CURDIR}/distinfo >> ${.CURDIR}/distinfo~

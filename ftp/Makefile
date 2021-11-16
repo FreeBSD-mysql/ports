@@ -14,6 +14,7 @@
     SUBDIR += dmachine
     SUBDIR += fastdfs
     SUBDIR += filezilla
+    SUBDIR += fineftp-server
     SUBDIR += fmirror
     SUBDIR += fpc-libcurl
     SUBDIR += freebsd-ftpd
@@ -93,6 +94,7 @@
     SUBDIR += wmget
     SUBDIR += wput
     SUBDIR += wxdfast
+    SUBDIR += wzdftpd
     SUBDIR += yafc
 
 .include <bsd.port.subdir.mk>

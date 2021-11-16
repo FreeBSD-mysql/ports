@@ -1,6 +1,5 @@
 PORTNAME=	libkleo
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,7 +12,6 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libqgpgme.so:security/gpgme-qt5 \
 		libgpgmepp.so:security/gpgme-cpp
 RUN_DEPENDS=	${LOCALBASE}/bin/gmd5sum:sysutils/coreutils
-
 
 USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 tar:xz
 USE_KDE=	codecs completion config coreaddons i18n itemmodels \
